@@ -23,30 +23,47 @@
   <body>
     <div class="container">
       <section class="calc-descr">
-				<h1 class="calc-descr__title">Это самый крутой калькулятор!</h1>
-				<p class="calc-descr__text">Давай посмотрим как он работает</p>
-				<p class="calc-descr__text">Нажми на кнопку, введи два значения и узнай ответ</p>
-			</section>
-			<div class="calc">
-				<button class="calc__btn btn-reset" onclick="calcPlus()">
-					<img src="img/plus.png" alt="plus">
-				</button>
-				<button class="calc__btn btn-reset" onclick="calcMinus()">
-					<img src="img/minus.png" alt="minus">
-				</button>
-				<button class="calc__btn btn-reset" onclick="calcMultiple()">
-					<img src="img/multiple.png" alt="multiple">
-				</button>
-				<button class="calc__btn btn-reset" onclick="calcDivision()">
-					<img src="img/division.png" alt="division">
-				</button>
+        <h1 class="calc-descr__title">Это самый крутой калькулятор!</h1>
+        <p class="calc-descr__text">Давай посмотрим как он работает</p>
+        <p class="calc-descr__text">
+          Нажми на кнопку, введи два значения и узнай ответ
+        </p>
+      </section>
+      <div class="calc__input">
+        <input type="text" class="calc__num calc__num--1" placeholder="Введите первое число" />
+        <input type="text" class="calc__num calc__num--2" placeholder="Введите второе число" />
+      </div>
+      <div class="calc">
+        <button class="calc__btn btn-reset" onclick="calcPlus()">
+          <img src="img/plus.png" alt="plus" />
+        </button>
+        <button class="calc__btn btn-reset" onclick="calcMinus()">
+          <img src="img/minus.png" alt="minus" />
+        </button>
+        <button class="calc__btn btn-reset" onclick="calcMultiple()">
+          <img src="img/multiple.png" alt="multiple" />
+        </button>
+        <button class="calc__btn btn-reset" onclick="calcDivision()">
+          <img src="img/division.png" alt="division" />
+        </button>
+      </div>
+			<div class="calc__output">
+				<button type="submit" class="calc__btn calc__btn--total btn-reset" onclick="pasteResult()">Получить ответ</button>
+				<p class="calc__result"></p>
 			</div>
-			<footer class="calc__footer">
-				<ul class="footer__list list-reset">
-					<li class="footer__item"><a href="https://github.com/Regina5425/calculator" target="_blank" class="footer__link">GitHub</a></li>
-					<li class="footer__item">2022</li>
-				</ul>
-			</footer>
+      <footer class="calc__footer">
+        <ul class="footer__list list-reset">
+          <li class="footer__item">
+            <a
+              href="https://github.com/Regina5425/calculator"
+              target="_blank"
+              class="footer__link"
+              >GitHub</a
+            >
+          </li>
+          <li class="footer__item">2022</li>
+        </ul>
+      </footer>
     </div>
     <script src="js/index.js"></script>
   </body>
