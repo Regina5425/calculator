@@ -1,33 +1,6 @@
-// function calcPlus () {
-// 	let a = +prompt('Введите первое число:', '');
-// 	let b =  +prompt('Введите второе число:', '');
-
-// 	return alert(`Ответ: ${a + b}`);
-// }
-
-// function calcMinus () {
-// 	let a = +prompt('Введите первое число:', '');
-// 	let b =  +prompt('Введите второе число:', '');
-
-// 	return alert(`Ответ: ${a - b}`);
-// }
-
-// function calcMultiple () {
-// 	let a = +prompt('Введите первое число:', '');
-// 	let b =  +prompt('Введите второе число:', '');
-
-// 	return alert(`Ответ: ${a * b}`);
-// }
-
-// function calcDivision () {
-// 	let a = +prompt('Введите первое число:', '');
-// 	let b =  +prompt('Введите второе число:', '');
-
-// 	return alert(`Ответ: ${a / b}`);
-// }
-
 const num1 = document.querySelector('.calc__num--1');
 const num2 = document.querySelector('.calc__num--2');
+const button = document.querySelectorAll('.calc__btn');
 
 let firstNum = function () {
 	return Number(num1.value);
@@ -47,18 +20,46 @@ function pasteResult() {
 	totalOutput.style.backgroundColor = '#fff';
 }
 
-function calcPlus() {
+// function calcPlus() {
+// 	result = firstNum() + secondNum();
+// }
+
+// function calcMinus () {	
+// 	result = firstNum() - secondNum();
+// }
+
+// function calcMultiple () {	
+// 	result = firstNum() * secondNum();
+// }
+
+// function calcDivision () {
+// 	let zeroNum = secondNum();
+
+// 	if (zeroNum === 0) {
+// 		alert('На ноль делить нельзя!');
+// 	} else {
+// 		result = firstNum() / secondNum();
+// 	}
+// }
+
+button[0].addEventListener('click', function calcPlus() {
 	result = firstNum() + secondNum();
-}
+});
 
-function calcMinus () {	
+button[1].addEventListener('click', function calcMinus() {
 	result = firstNum() - secondNum();
-}
+});
 
-function calcMultiple () {	
+button[2].addEventListener('click', function calcMultiple() {
 	result = firstNum() * secondNum();
-}
+});
 
-function calcDivision () {	
-	result = firstNum() / secondNum();
-}
+button[3].addEventListener('click', function calcDivision() {
+	let zeroNum = secondNum();
+
+	if (zeroNum === 0) {
+		alert('На ноль делить нельзя!');
+	} else {
+		result = firstNum() / secondNum();
+	}
+});
