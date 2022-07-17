@@ -1,6 +1,7 @@
 const num1 = document.querySelector('.calc__num--1');
 const num2 = document.querySelector('.calc__num--2');
 const button = document.querySelectorAll('.calc__btn');
+const err = document.querySelector('.calc__error');
 
 let firstNum = function () {
 	return Number(num1.value);
@@ -20,28 +21,6 @@ function pasteResult() {
 	totalOutput.style.backgroundColor = '#fff';
 }
 
-// function calcPlus() {
-// 	result = firstNum() + secondNum();
-// }
-
-// function calcMinus () {	
-// 	result = firstNum() - secondNum();
-// }
-
-// function calcMultiple () {	
-// 	result = firstNum() * secondNum();
-// }
-
-// function calcDivision () {
-// 	let zeroNum = secondNum();
-
-// 	if (zeroNum === 0) {
-// 		alert('На ноль делить нельзя!');
-// 	} else {
-// 		result = firstNum() / secondNum();
-// 	}
-// }
-
 button[0].addEventListener('click', function calcPlus() {
 	result = firstNum() + secondNum();
 });
@@ -57,8 +36,10 @@ button[2].addEventListener('click', function calcMultiple() {
 button[3].addEventListener('click', function calcDivision() {
 	let zeroNum = secondNum();
 
+	err.textContent = '';
+
 	if (zeroNum === 0) {
-		alert('На ноль делить нельзя!');
+		err.textContent = 'На ноль делить нельзя!';
 	} else {
 		result = firstNum() / secondNum();
 	}

@@ -30,8 +30,16 @@
         </p>
       </section>
       <div class="calc__input">
-        <input type="text" class="calc__num calc__num--1" placeholder="Введите первое число" />
-        <input type="text" class="calc__num calc__num--2" placeholder="Введите второе число" />
+        <input
+          type="text"
+          class="calc__num calc__num--1"
+          placeholder="Введите первое число"
+        />
+        <input
+          type="text"
+          class="calc__num calc__num--2"
+          placeholder="Введите второе число"
+        />
       </div>
       <div class="calc">
         <button class="calc__btn btn-reset">
@@ -47,10 +55,17 @@
           <img src="img/division.png" alt="division" />
         </button>
       </div>
-			<div class="calc__output">
-				<button type="submit" class="calc__btn calc__btn--total btn-reset" onclick="pasteResult()">Получить ответ</button>
-				<p class="calc__result"></p>
-			</div>
+      <div class="calc__error"></div>
+      <div class="calc__output">
+        <button
+          type="submit"
+          class="calc__btn calc__btn--total btn-reset"
+          onclick="pasteResult()"
+        >
+          Получить ответ
+        </button>
+        <p class="calc__result"></p>
+      </div>
       <footer class="calc__footer">
         <ul class="footer__list list-reset">
           <li class="footer__item">
