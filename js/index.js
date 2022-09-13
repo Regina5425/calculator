@@ -30,7 +30,7 @@ class Calculator {
 	}
 
 	static calcDivision(a, b) {
-		return a / b;
+		return (a / b).toFixed(2);
 	}
 }
 
